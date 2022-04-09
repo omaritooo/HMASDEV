@@ -37,6 +37,7 @@ export default {
 .container {
     display: flex;
     justify-content: start;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     max-width: 1500px;
     gap: 50px;

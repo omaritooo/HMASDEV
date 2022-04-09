@@ -48,6 +48,7 @@ div {
     width: fit-content;
     max-width: 500px;
     display: flex;
+    border-radius: 10px;
     flex-direction: column;
     background: black;
 }
@@ -62,7 +63,7 @@ div {
     padding: 5px 15px;
 }
 .id {
-    background: transparent;
+    background: blue;
     color: white;
     font-size: 14px;
     position: absolute;
