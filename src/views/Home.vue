@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-red-400">
+  <div class>
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />-->
-    <div class="tabholder">
+    <div class="flex justify-center gap-x-10">
       <div v-for="category in categories" :key="category.index">
         <CategoryTab
           :dynamic="{ name: category.category_id, params: { code: category.category_id } }"

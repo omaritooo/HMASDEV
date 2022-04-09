@@ -1,5 +1,8 @@
 <template>
-    <router-link :to="`/${dynamic.name}`" class="tab">{{ Label }}</router-link>
+    <router-link
+        :to="`/${dynamic.name}`"
+        class="text-[32px] rounded-lg font-bold text-black bg-white shadow-2xl w-fit p-10 hover:bg-black hover:text-white transition-colors duration-150 no-underline"
+    >{{ Label }}</router-link>
 </template>
 
 <script>

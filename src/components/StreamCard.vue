@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <!-- <div class="card">
         <div>
             <div v-if="Card.stream_icon">
                 <img
@@ -19,6 +19,23 @@
         <div class="live" v-if="Card.stream_type == 'live'">{{ Card.stream_type }}</div>
         <div class="id">{{ Card.stream_id }}</div>
         <h1>{{ Card.name }}</h1>
+    </div>-->
+    <div class="max-w-sm overflow-hidden rounded shadow-lg">
+        <img class="w-[400px] h-[400px] mx-auto" :src="Card.stream_icon" @error="errorHandler" />
+        <div class="relative z-30 px-6 py-4 text-black">
+            <div class="mb-2 text-xl font-bold text-black">
+                <span class="text-black">{{ Card.name }}</span>
+            </div>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+            <span
+                v-if="Card.stream_type == 'live'"
+                class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >{{ Card.stream_type }}</span>
+            <span
+                class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+            >Stream id: {{ Card.stream_id }}</span>
+        </div>
     </div>
 </template>
 
@@ -40,39 +57,4 @@ export default {
 </script>
 
 <style scoped>
-div {
-    color: white;
-}
-.card {
-    position: relative;
-    width: fit-content;
-    max-width: 500px;
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    background: black;
-}
-.live {
-    background: red;
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    border-radius: 10px;
-    padding: 5px 15px;
-}
-.id {
-    background: blue;
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    border-radius: 10px;
-    padding: 5px 15px;
-}
-h1 {
-    color: white;
-}
 </style>
