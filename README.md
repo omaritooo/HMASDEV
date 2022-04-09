@@ -1,24 +1,18 @@
 # hdev
 
-## Project setup
+## Technologies used
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+Vue-router
+Axios
+Tailwindcss
+Vue 2
 ```
 
-### Compiles and minifies for production
+### Dev Process
 ```
-npm run build
+Acquiring endpoints by accessing the json file via POSTMAN.
+Accessing the APIs using given credentials which are set globally in the code.
+Showcasing endpoint data in a readable manner while taking into account error handling such as some images not loading.
+
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
