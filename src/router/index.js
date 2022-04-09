@@ -4,9 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const NotFound = Vue.extend({
-  template: '<div>Page not found</div>'
-});
+
 
 const routes = [
   {
@@ -23,12 +21,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Streams.vue')
   },
-  {
-    path: '/404', name: 'NotFound', component: NotFound
-  },
-  {
-    path: '/:catchAll(.*)', redirect: '404'
-  }
+
 
 
 
